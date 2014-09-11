@@ -1,3 +1,6 @@
+creds.rb
+*~
+
 *.gem
 *.rbc
 /.config
