@@ -26,7 +26,8 @@ radios.each do | r |
 end
 
 tiebreaker_scores = b.text_fields(:id => /tiebreak/).each do |t|
-  score = (1..50).to_a.sample
+  scores = (2..50).to_a.insert(0,0)
+  score = scores.sample
   t.set(score.to_s)
 end
 
