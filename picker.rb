@@ -1,9 +1,6 @@
 require_relative 'creds.rb'
 require 'watir-webdriver'
 
-p $username
-p $password
-
 b = Watir::Browser.new
 
 b.goto 'http://football.fantasysports.yahoo.com/pickem'
@@ -37,7 +34,7 @@ tb_tmp.select tb_tmp.options.to_a.sample.text
 tb_tlp = b.select_list(:id => 'tb_tlp')
 tb_tlp.select tb_tlp.options.to_a.sample.text
 
-b.link(:text => 'Save Picks').click
+#b.link(:text => 'Save Picks').click
 
 
 
