@@ -18,6 +18,7 @@ b.link(:text => 'Make your picks').when_present.click
 radios = b.radios
 
 radios.each do | r |
+  next unless r.enabled?
   b.radios(:name => r.name).to_a.sample.set
   next
 end
